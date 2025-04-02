@@ -24,9 +24,9 @@ jobs:
         run: echo "const API_KEY = '${{ secrets.GEMINI_API_KEY }}';" > api_key.js
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .  # Deploy everything
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
